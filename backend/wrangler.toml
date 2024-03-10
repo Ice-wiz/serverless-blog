@@ -1,9 +1,9 @@
 name = "backend"
 compatibility_date = "2023-12-01"
 
-# [vars]
+[vars]
 JWT_SECRET="secr3t"
-DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMzgzYjcwMDYtZDlhMC00Zjc4LWI3ODAtZGQzMmNhMTVmYzU2IiwidGVuYW50X2lkIjoiM2NiNTU0OWZkNDgyMjQyMTEyODdhZmYxOGU4YmQzOWRjYTUzNWYwZjExYTYxNGYyN2I2ZTUyYTUxNDU5MzQyOSIsImludGVybmFsX3NlY3JldCI6IjdhOWMwNzVjLWUzN2QtNDAyYS1iOThhLTY2ZWU3YTZhNDkyMCJ9.opkH6OvnAiyBwvpQ8_O2fvKKunDRrK059j7fu8aQHes"
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDRhZGIwMjUtMzA3NC00ZmI4LWJjNGQtMGI2Y2M5NDZjM2I1IiwidGVuYW50X2lkIjoiNWU2ZTE5N2YxZjBhZmE0MmU0MTk4NjgwNzQyMDZlZTIxZjIyMTMwNTA4NzhjZTlhNWQyMDk1NGVlMzcxOWUyYSIsImludGVybmFsX3NlY3JldCI6IjkzMmZiMmI2LWUzMDItNDJkMC1iZTI4LWEzNDBhYjY1NDcxOSJ9.Cgr7T-pFleOutTt1bGU4ntt1aHJKNofBxmwlfH68Uw4"
 # MY_VARIABLE = "production_value"
 
 # [[kv_namespaces]]
