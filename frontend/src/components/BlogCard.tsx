@@ -17,7 +17,7 @@ export const BlogCard = ({
   return (
     <Link to={`/blog/${id}`}>
       <div className="my-10 flex justify-center">
-        <div className=" p-4 border-b border-slate-400 pb-4 w-screen max-w-screen-md shadow-lg ">
+        <div className=" p-4 border-b border-slate-200 pb-4 w-screen max-w-screen-md shadow-lg cursor-pointer ">
           <div className="flex">
             <Avatar name={authorName} />
             <div className="font-extralight pl-2 text-sm flex justify-center flex-col">
@@ -31,7 +31,9 @@ export const BlogCard = ({
             </div>
           </div>
           <div className="text-xl font-semibold pt-2">{title}</div>
-          <div className="text-md font-thin">{content.slice(0, 200) + "..."}</div>
+          <div className="text-md font-thin">
+            {content.slice(0, 200) + "..."}
+          </div>
           <div className="text-slate-500 text-sm font-thin pt-4">
             {`${Math.ceil(content.length / 100)} minute(s) read`}
           </div>

@@ -1,37 +1,38 @@
-import { BlogCard } from "../components/BlogCard";
-import { Appbar } from "../components/Appbar";
+import { Appbar } from "../components/Appbar"
+import { BlogCard } from "../components/BlogCard"
+import { BlogSkeleton } from "../components/BlogSkeleton";
+import { useBlogs } from "../hooks";
 
 export const Blogs = () => {
-  return (
-    <div>
-      <Appbar />
-      <BlogCard
-        id={1}
-        authorName={"aryan"}
-        title={"how to scale your business using social media"}
-        content={
-          "lets discuss on how to scale your social media business for good lets discuss on how to scale your social media business for goodlets discuss on how to scale your social media business for good "
-        }
-        publishedDate={"13/2/2002"}
-      />
-      <BlogCard
-        id={1}
-        authorName={"aryan"}
-        title={"how to scale your business using social media"}
-        content={
-          "lets discuss on how to scale your social media business for good lets discuss on how to scale your social media business for goodlets discuss on how to scale your social media business for good "
-        }
-        publishedDate={"13/2/2002"}
-      />
-      <BlogCard
-        id={1}
-        authorName={"aryan"}
-        title={"how to scale your business using social media"}
-        content={
-          "lets discuss on how to scale your social media business for good lets discuss on how to scale your social media business for goodlets discuss on how to scale your social media business for good "
-        }
-        publishedDate={"13/2/2002"}
-      />
+    const { loading, blogs } = useBlogs();
+
+    if (loading) {
+        return <div>
+            <Appbar /> 
+            <div  className="flex justify-center">
+                <div>
+                    <BlogSkeleton />
+                    <BlogSkeleton />
+                    <BlogSkeleton />
+                    <BlogSkeleton />
+                    <BlogSkeleton />
+                </div>
+            </div>
+        </div>
+    }
+
+    return <div>
+        <Appbar />
+        <div  className="flex justify-center">
+            <div>
+                {blogs.map(blog => <BlogCard
+                    id={blog.id}
+                    authorName={blog.author.name || "Anonymous"}
+                    title={blog.title}
+                    content={blog.content}
+                    publishedDate={new Date(blog.publishedDate).toLocaleDateString()}
+                />)}
+            </div>
+        </div>
     </div>
-  );
-};
+}
